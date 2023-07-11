@@ -1,0 +1,21 @@
+from docx import Document
+
+def extract_keywords_to_file():
+    docx_file = input("Enter the path to the document file (DOCX): ")
+    doc = Document(docx_file)
+    highlighted_text = []
+
+    for paragraph in doc.paragraphs:
+        for run in paragraph.runs:
+            if run.font.highlight_color is not None:
+                highlighted_text.append(run.text)
+
+    if highlighted_text:
+        with open('highlighted_keywords.txt', 'w') as file:
+            file.write('\n'.join(highlighted_text))
+        print("Highlighted texts extracted and saved to 'highlighted_keywords.txt'.")
+    else:
+        print("No highlighted texts found in the document.")
+
+# Example usage
+extract_keywords_to_file()
