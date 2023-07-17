@@ -1,0 +1,18 @@
+from num2words import num2words
+from googletrans import Translator
+
+number = input ( "enter number :  ")
+
+# Get the target language from the user
+target_language = input("Enter the target language : ")
+
+# Create an instance of the Translator class
+translator = Translator(service_urls=['translate.google.com'])
+
+# Translate the number to the target language
+
+# Translate the number to the target language
+translated_number = num2words(number, lang=target_language)
+# Display the translated text
+
+print("Translated Number:", translated_number) 
