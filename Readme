@@ -1,0 +1,17 @@
+# HighlightGrabber
+
+**HighlightGrabber** is a Python utility that extracts all highlighted text from a DOCX document and saves it into a separate text file. This tool is useful for quickly collecting keywords, important notes, or key phrases from reports, articles, or research papers.
+
+---
+
+## **What it does**
+- Reads a DOCX document provided by the user
+- Scans all paragraphs and runs for **highlighted text**
+- Saves extracted highlighted text into a text file (`highlighted_keywords.txt`)
+- Provides a simple command-line interface for ease of use
+
+---
+
+## **Tech Stack**
+- **Python 3.x**
+- **python-docx** – for reading and parsing DOCX documents
